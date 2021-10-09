@@ -1,10 +1,11 @@
 import React from 'react'
+import Card from '../UI/Card'
 
 function UsersList(props) {
     return (
         <ul>
         {props.data.map(e => {
-            return <li key={e.name}>{e.name} {e.age} yrs old</li>
+            return (<Card><li key={e.name}>{e.name} who is {e.age} yrs old</li></Card>)
         })}
         </ul>
     )

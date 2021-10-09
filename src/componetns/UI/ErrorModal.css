@@ -1,0 +1,9 @@
+.modal {
+    border: 3px solid red;
+    background-color: white;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   padding: 30px;
+}
+
