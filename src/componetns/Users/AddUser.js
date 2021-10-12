@@ -29,6 +29,7 @@ function AddUser(props) {
 
   const removeModal = () => {
       setError(null);
+      console.log("btn")
   }
   
   const usernameChangeHandler = (event) => {
@@ -39,7 +40,7 @@ function AddUser(props) {
   };
   return (
     <>
-      <div className="grey-outer">
+      <div >
         {error && 
         <ErrorModal title={error.title}
          message={error.message} 
