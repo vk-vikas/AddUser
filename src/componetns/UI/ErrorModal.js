@@ -1,15 +1,18 @@
-import React from 'react'
+import React from "react";
 import "./ErrorModal.css";
 function ErrorModal(props) {
-    return (
-        <div className="modal">
-            <header>
-                <h2>{props.title}</h2>
-            </header>
-            <p>{props.message}</p>
-            <footer><button>okay</button></footer>
-        </div>
-    )
+  return (
+    <div className="backdrop">
+      <div className="modal">
+          <h2 className="title">{props.title}</h2>
+    
+        <p>{props.message}</p>
+
+          <button className="button" onClick={props.onRemoval}>okay</button>
+    
+      </div>
+    </div>
+  );
 }
 
-export default ErrorModal
+export default ErrorModal;

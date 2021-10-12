@@ -27,6 +27,10 @@ function AddUser(props) {
     setEnteredUsername("");
   };
 
+  const removeModal = () => {
+      setError(null);
+  }
+  
   const usernameChangeHandler = (event) => {
     setEnteredUsername(event.target.value);
   };
@@ -36,7 +40,11 @@ function AddUser(props) {
   return (
     <>
       <div className="grey-outer">
-        {error && <ErrorModal title={error.title} message={error.message} />}
+        {error && 
+        <ErrorModal title={error.title}
+         message={error.message} 
+         onRemoval={removeModal}
+         />}
         <Card>
           <form onSubmit={addUserHandler}>
             <label>UserName</label>
